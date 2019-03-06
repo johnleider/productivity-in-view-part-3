@@ -1,0 +1,9 @@
+<template>
+  <v-toolbar
+    app
+    color="white"
+    prominent
+  >
+    <v-toolbar-title>App</v-toolbar-title>
+  </v-toolbar>
+</template>
