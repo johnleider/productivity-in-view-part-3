@@ -3,14 +3,36 @@
     <v-card
       class="mb-2"
       height="300"
+      v-bind="$attrs"
+      v-on="$listeners"
     />
 
-    <h2 class="title mb-2">
-      I'm a text title
-    </h2>
+    <h2
+      v-if="title"
+      class="title mb-2"
+      v-text="title"
+    />
 
-    <div>
-      Mauris turpis nunc, blandit et, volutpat molestie congue nunc, vitae euismod ligula urna in dolor.
-    </div>
+    <div
+      v-if="text"
+      v-text="text"
+    />
   </div>
 </template>
+
+<script>
+  export default {
+    inheritAttrs: false,
+
+    props: {
+      title: {
+        type: String,
+        default: undefined
+      },
+      text: {
+        type: String,
+        default: undefined
+      }
+    }
+  }
+</script>
